@@ -14,7 +14,7 @@
 		toBuy.items = ShoppingListCheckOffService.GetToBuyItems();
 	
 		toBuy.switchList = function (itemIndex) {
-			toBuy.items = ShoppingListCheckOffService.MovedToBoughtList(toBuy.items[itemIndex], itemIndex);
+			toBuy.items = ShoppingListCheckOffService.MovedToBoughtList(itemIndex);
 		}
 	}
 
@@ -40,7 +40,9 @@
 
 		var boughtList = [];
 		
-		listService.MovedToBoughtList = function (item, itemIndex) {
+		listService.MovedToBoughtList = function (itemIndex) {
+			var item = toBuyList[itemIndex];
+
 			boughtList.push(AddToList(item.quantity, item.name));
 			RemoveFromList(itemIndex, toBuyList);
 			
