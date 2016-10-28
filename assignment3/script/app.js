@@ -5,7 +5,7 @@
 	angular.module('ShoppingListSearchApp', [])
 	.controller('SearchResultsController', SearchResultsController)
 	.service('SearchService', SearchService)
-	.constant('ApiBasePath', "http://davids-restaurant.herokuapp.com")
+	.constant('ApiBasePath', "https://davids-restaurant.herokuapp.com")
 	.directive('searchList', SearchList);;
 
 
