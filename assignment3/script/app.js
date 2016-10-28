@@ -60,7 +60,7 @@
 		{
 			var item = list[i];
 			
-			if (MatchItem(item.name, matchText))
+			if (MatchItem(item.description, matchText))
 			{
 				matchedList.push(item);
 			}
