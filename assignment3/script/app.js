@@ -36,7 +36,7 @@
 					}
 				})
 				.catch(function (error) {
-					console.log('unable to contact server');
+					console.log(error);
 					searchResults.nothingFound = true;
 				});
 			}
