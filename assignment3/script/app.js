@@ -21,6 +21,8 @@
 
 		searchResults.narrowItDown = function () {
 
+			searchResults.foundItems = [];
+
 			if (searchResults.searchTerm.length > 0)
 			{
 				searchPromise.then(function (response) {
