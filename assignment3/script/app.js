@@ -26,7 +26,7 @@
 			if (searchResults.searchTerm.length > 0)
 			{
 				searchPromise.then(function (response) {
-					searchResults.foundItems = GetShoppingList(response.data.menu_items, searchResults.searchTerm);
+					searchResults.foundItems = GetShoppingList(response.data.menu_items, searchResults.searchTerm.trim());
 
 					if (searchResults.foundItems.length > 0)
 					{	
