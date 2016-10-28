@@ -1,0 +1,14 @@
+﻿<table ng-show="searchResults.foundItems.length > 0">
+	<tr>
+		<th>Short Name</th>
+		<th>Name</th>
+		<th>Description</th>
+		<th></th>
+	</tr>
+	<tr ng-repeat="item in searchResults.foundItems">
+		<td>{{item.short_name}}</td>
+		<td>{{item.name}}</td>
+		<td>{{item.description}}</td>
+		<td><button class="btn btn-primary" ng-click="searchResults.removeItem($index)">Click to remove item</button></td>
+	</tr>
+</table>
