@@ -42,7 +42,7 @@ function MenuService($http, ApiPath) {
   	lastName: "",
   	email: "",
   	telephone: "",
-  	menuCode: ""
+  	menuItem: ""
   }
 	
   service.StoreSignUpData = function(signUpResponse) {
@@ -50,11 +50,11 @@ function MenuService($http, ApiPath) {
   }
 
   service.RetrieveSignUpData = function () {
-  	console.log(signUpData.firstName);
+  	/*console.log(signUpData.firstName);
   	console.log(signUpData.lastName);
   	console.log(signUpData.email);
-  	console.log(signUpData.telephone);
-  	console.log(signUpData.menuCode);
+  	console.log(signUpData.telephone);*/
+  	console.log(signUpData.menuItem);
 
   	return signUpData;
   }

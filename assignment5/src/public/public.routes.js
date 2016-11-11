@@ -55,10 +55,6 @@ function routeConfig ($stateProvider) {
 		resolve: {
 			signUpData: ['MenuService', function (MenuService) {
 				return MenuService.RetrieveSignUpData();
-			}],
-			chosenItem: ['$stateParams', 'MenuService', function ($stateParams, MenuService) {
-				$stateParams.shrtname = ($stateParams.shrtname == undefined) ? "L1" : $stateParams.shrtname;
-				return MenuService.getItemsByShrtName($stateParams.shrtname);
 			}]
 		}
 	});

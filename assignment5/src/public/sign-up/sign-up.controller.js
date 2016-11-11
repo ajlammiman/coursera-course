@@ -30,7 +30,7 @@ function SignUpController(MenuService) {
 					lastName: signUpCtrl.lastName,
 					email: signUpCtrl.email,
 					telephone: signUpCtrl.telephone,
-					menuCode: signUpCtrl.menuCode
+					menuItem: response.data
 				}
 
 				MenuService.StoreSignUpData(signUpData);
