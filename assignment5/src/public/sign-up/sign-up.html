@@ -6,7 +6,7 @@
 			<li><label>Last Name*:</label> <input type="text" val="" name="lastName" ng-model="signUpCtrl.lastName" required /><span ng-if="SignUpForm.lastName.$error.required && SignUpForm.lastName.$touched"> Please give your Last Name</span></li>
 			<li><label>Email Address*:</label> <input type="email" val="" name="email" ng-model="signUpCtrl.email" required /><span ng-if="SignUpForm.email.$invalid && SignUpForm.email.$touched"> Please give a valid Email address</span></li>
 			<li><label>Phone Number*:</label> <input type="tel" val="" name="telephone" ng-model="signUpCtrl.telephone" required pattern="(\d{3})-(\d{3})-(\d{4})" /><span ng-if="SignUpForm.telephone.$invalid && SignUpForm.telephone.$touched"> Please give a valid Contact number 000-000-0000</span></li>
-			<li><label>Type a Menu Code:</label> <input type="text" val="" name="menuNo" ng-model="signUpCtrl.menuCode" /></li>
+			<li><label>Choose a Menu Code*:</label> <input type="text" val="" name="menuNo" ng-model="signUpCtrl.menuCode" required/><span ng-if="SignUpForm.menuCode.$error.required && SignUpForm.menuNo.$touched"> Please type a Menu Code</span></li>
 			<li><input type="submit" name="Submit" value="SIGN UP" ng-click="signUpCtrl.formSubmit()" ng-disabled="SignUpForm.$invalid" /></li>
 			<li>* is a mandatory field.</li>
 		</ul>
