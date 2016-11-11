@@ -1,0 +1,15 @@
+﻿<div class="no-information" ng-if="$ctrl.info.firstName.length == 0">
+	Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+</div>
+<div ng-if="$ctrl.info.firstName.length != 0">
+	<ul>
+		<li><label>First Name:</label> {{$ctrl.info.firstName}}</li>
+		<li><label>Last Name:</label> {{$ctrl.info.lastName}}</li>
+		<li><label>Email:</label> {{$ctrl.info.email}}</li>
+		<li><label>Telephone:</label> {{$ctrl.info.telephone}}</li>
+	</ul>
+	<div>
+		<menu-category category="$ctrl.item"></menu-category>
+	</div>
+</div>
+

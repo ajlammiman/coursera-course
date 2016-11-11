@@ -200,3 +200,64 @@ a[ui-sref="admin.auth"] {
   }
   /* End Header */
 }
+
+/* SIGN-UP FORM */
+	
+	.sign-up-form, .registered-information
+	{
+		width:60%;
+		margin:0 auto;
+	}
+
+	.registered-information
+	{
+		min-height:500px;
+	}
+
+	.sign-up-form li, .registered-information li
+	{
+		list-style:none;
+		margin-bottom:5px;
+	}
+
+	.sign-up-form label, .registered-information label
+	{
+		width:150px;
+	}
+
+
+	.sign-up-form input, .sign-up-form select
+	{
+		color:#333;
+	}
+
+	.sign-up-form input[type=submit]
+	{
+		background-color:#f6b319;
+		color:#557c3e;
+		padding:5px;
+	}
+
+	.sign-up-form .ng-valid input[type=submit]
+	{
+		background-color:#f6b319;
+	}
+
+	.sign-up-form .ng-invalid input[type=submit]
+	{
+		background-color:#333;
+		color:#fff;
+	}
+
+	.sign-up-form .no-menu, .registered-information .no-information
+	{
+		font-weight:bold;
+		font-size:2em;
+	}
+
+	.registered-information .no-information
+	{
+		margin:10px 0;
+	}
+
+/* SIGN-UP FORM */

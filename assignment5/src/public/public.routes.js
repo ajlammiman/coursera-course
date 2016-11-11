@@ -37,9 +37,30 @@ function routeConfig ($stateProvider) {
       controllerAs: 'menuItemsCtrl',
       resolve: {
         menuItems: ['$stateParams','MenuService', function ($stateParams, MenuService) {
-          return MenuService.getMenuItems($stateParams.category);
+        	return MenuService.getMenuItems($stateParams.category);
         }]
       }
-    });
+    })
+	.state('public.signup', {
+		url: '/sign-up',
+		templateUrl: 'src/public/sign-up/sign-up.html',
+		controller: 'SignUpController',
+		controllerAs: 'signUpCtrl'
+	})
+	.state('public.myinfo', {
+		url: '/my-info',
+		templateUrl: 'src/public/my-info/my-info.html',
+		controller: 'MyInfoController',
+		controllerAs: 'myInfoCtrl',
+		resolve: {
+			signUpData: ['MenuService', function (MenuService) {
+				return MenuService.RetrieveSignUpData();
+			}],
+			chosenItem: ['$stateParams', 'MenuService', function ($stateParams, MenuService) {
+				$stateParams.shrtname = ($stateParams.shrtname == undefined) ? "L1" : $stateParams.shrtname;
+				return MenuService.getItemsByShrtName($stateParams.shrtname);
+			}]
+		}
+	});
 }
 })();

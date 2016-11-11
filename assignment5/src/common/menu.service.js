@@ -15,7 +15,7 @@ function MenuService($http, ApiPath) {
     });
   };
 
-
+  
   service.getMenuItems = function (category) {
     var config = {};
     if (category) {
@@ -26,6 +26,38 @@ function MenuService($http, ApiPath) {
       return response.data;
     });
   };
+
+  service.getItemsByShrtName = function (shrtName) {
+
+  	var response = $http({
+  		method: 'GET',
+  		url: (ApiPath + '/menu_items/' + shrtName + '.json')
+  	});
+
+  	return response;
+  }
+
+  var signUpData = {
+  	firstName: "",
+  	lastName: "",
+  	email: "",
+  	telephone: "",
+  	menuCode: ""
+  }
+	
+  service.StoreSignUpData = function(signUpResponse) {
+  	signUpData = signUpResponse;
+  }
+
+  service.RetrieveSignUpData = function () {
+  	console.log(signUpData.firstName);
+  	console.log(signUpData.lastName);
+  	console.log(signUpData.email);
+  	console.log(signUpData.telephone);
+  	console.log(signUpData.menuCode);
+
+  	return signUpData;
+  }
 
 }
 
