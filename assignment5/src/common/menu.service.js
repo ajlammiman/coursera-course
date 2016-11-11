@@ -31,7 +31,7 @@ function MenuService($http, ApiPath) {
 
   	var response = $http({
   		method: 'GET',
-  		url: (ApiPath + '/menu_items/' + shrtName + '.json')
+  		url: (ApiPath + '/menu_items/' + shrtName.trim() + '.json')
   	});
 
   	return response;
